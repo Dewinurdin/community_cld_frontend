@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for EventListCard TEST_FULL render should match the snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <a
+        class="gridCard"
+        href="/events/ck5flbejv00200730x34y4le6"
+      >
+        <img
+          class="event_image"
+          src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F69917729%2F89373299245%2F1%2Foriginal.jpg?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C693%2C4000%2C2000&s=94184073d91c25306d22d1b0401cfea9"
+        />
+        <div
+          class="column event_details"
+        >
+          <p
+            class="has-text-weight-bold color_chalice"
+            data-id="event_location"
+            data-testid="event_location"
+          >
+            <span
+              class="is-size-6 is-uppercase"
+            >
+              Downtown
+            </span>
+            <span
+              class="is-size-7"
+            >
+                •  
+              <span
+                class="space_letters"
+              >
+                9402.3
+              </span>
+               
+              mi away
+            </span>
+          </p>
+          <p
+            class="is-size-5 has-text-weight-bold color_black"
+            data-id="event_title"
+            data-testid="event_title"
+          >
+            Art & Architecture - Downtown Walking Tour
+          </p>
+          <p
+            class="is-size-6"
+          >
+            <span
+              class="color_chalice"
+              data-id="event_time"
+            >
+               - 
+            </span>
+             
+            <span>
+              •
+            </span>
+             
+            <span
+              class="color_chalice"
+            >
+              Free
+            </span>
+          </p>
+          <p
+            class="eventDescription is-size-7 color_black is-hidden-mobile"
+            data-id="event_description"
+            data-testid="event_description"
+          >
+            Detroit is a city rich in history, grand buildings, and vibrant art surrounding public spaces. Walk with Detroit Experience Factory through the downtown area as we explore some of the great contributions of both prolific architects and emerging artists.
+          </p>
+          <div
+            class="descriptionUnderline"
+          />
+        </div>
+      </a>
+    </div>
+  </body>,
+  "container": <div>
+    <a
+      class="gridCard"
+      href="/events/ck5flbejv00200730x34y4le6"
+    >
+      <img
+        class="event_image"
+        src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F69917729%2F89373299245%2F1%2Foriginal.jpg?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C693%2C4000%2C2000&s=94184073d91c25306d22d1b0401cfea9"
+      />
+      <div
+        class="column event_details"
+      >
+        <p
+          class="has-text-weight-bold color_chalice"
+          data-id="event_location"
+          data-testid="event_location"
+        >
+          <span
+            class="is-size-6 is-uppercase"
+          >
+            Downtown
+          </span>
+          <span
+            class="is-size-7"
+          >
+              •  
+            <span
+              class="space_letters"
+            >
+              9402.3
+            </span>
+             
+            mi away
+          </span>
+        </p>
+        <p
+          class="is-size-5 has-text-weight-bold color_black"
+          data-id="event_title"
+          data-testid="event_title"
+        >
+          Art & Architecture - Downtown Walking Tour
+        </p>
+        <p
+          class="is-size-6"
+        >
+          <span
+            class="color_chalice"
+            data-id="event_time"
+          >
+             - 
+          </span>
+           
+          <span>
+            •
+          </span>
+           
+          <span
+            class="color_chalice"
+          >
+            Free
+          </span>
+        </p>
+        <p
+          class="eventDescription is-size-7 color_black is-hidden-mobile"
+          data-id="event_description"
+          data-testid="event_description"
+        >
+          Detroit is a city rich in history, grand buildings, and vibrant art surrounding public spaces. Walk with Detroit Experience Factory through the downtown area as we explore some of the great contributions of both prolific architects and emerging artists.
+        </p>
+        <div
+          class="descriptionUnderline"
+        />
+      </div>
+    </a>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

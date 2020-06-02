@@ -1,0 +1,79 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '~bulma/sass/utilities/_all.sass';
+@import '~bulma/sass/grid/columns.sass';
+
+.event_list {
+  @include mx-auto;
+  width: 100%;
+}
+
+.iconDivider {
+  display: inline-block;
+  @include content-divider(y, 2px);
+  height: 30px;
+  margin-left: $gap-xxs;
+  margin-right: $gap-xxs;
+}
+
+$smallGrid: ($gridCard-w + ($gap-md * 2));
+$medGrid: $smallGrid * 2;
+$lgGrid: $smallGrid * 3;
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: $gap;
+}
+
+.list_container {
+  @include mx-auto;
+  width: 100%;
+  max-width: 100%;
+  a:first-of-type {
+    margin-top: 0 !important;
+  }
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: $gap-xs;
+  @include mx-auto;
+
+  @media screen and (min-width: 650px) {
+    grid-template-columns: repeat(2, minmax(200px, 50%));
+  }
+
+  @media screen and (min-width: 971px) {
+    grid-template-columns: repeat(3, minmax(200px, 33%));
+  }
+}
+
+// ===== Columns =====
+.column,
+.columns {
+  padding: 0;
+  margin: {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.columns:last-child {
+  margin-bottom: initial;
+}
+
+.columns:not(:last-child) {
+  margin-bottom: initial;
+}
+
+// must be included to override bulma
+.is-narrow {
+}
+
+// must be included to override bulma
+.is-mobile {
+}

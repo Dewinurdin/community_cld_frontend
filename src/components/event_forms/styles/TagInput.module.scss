@@ -1,0 +1,57 @@
+@import '_variables.scss';
+
+.tagWrapper {
+  input {
+    padding: $gap-xxs 0;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-top: $gap-sm;
+  }
+
+  .tagDisplayClass {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .suggestedTags {
+    width: 48% !important;
+    max-height: 15vh;
+    position: absolute;
+    background-color: $offwhite;
+    z-index: 1;
+    overflow-y: scroll;
+
+    p:hover {
+      background-color: black;
+      color: white;
+    }
+
+    &.filter {
+      width: 100% !important;
+    }
+  }
+
+  .tagClass {
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    margin-right: $gap-sm;
+    margin-top: $gap-sm;
+    width: unset !important;
+    background-color: $shark;
+
+    .tagNameClass {
+      color: white;
+      text-align: center;
+    }
+
+    .removeTagBtn {
+      margin-left: $gap-sm;
+      border-radius: 50%;
+      background-color: $chalice;
+      color: $shark;
+      padding: 0 0.24rem;
+      display: inline-block;
+      transform: scale(1.5, 1);
+    }
+  }
+}

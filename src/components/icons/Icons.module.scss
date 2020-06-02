@@ -1,0 +1,55 @@
+@import '_variables.scss';
+
+.active {
+  path {
+    fill: $shark !important;
+  }
+}
+
+.gearActive {
+  path {
+    fill: $white !important;
+  }
+}
+
+@mixin iconFillTransition {
+  transition: fill $duration-short;
+}
+
+.heart {
+  transition: transform $duration-short;
+  fill: none;
+  path {
+    stroke: $shark;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+  &.liked {
+    fill: $sunsetOrange;
+  }
+}
+
+.darkFill {
+  path {
+    fill: $shark;
+  }
+}
+
+.lightFill {
+  path {
+    fill: $white;
+  }
+}
+.dropdown {
+  transition: all $duration-short;
+}
+
+.grid,
+.list,
+.gear {
+  path {
+    @include iconFillTransition();
+    fill: $iconLight;
+  }
+}

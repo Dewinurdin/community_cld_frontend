@@ -1,0 +1,151 @@
+@import '_variables.scss';
+
+// ===== Typography =====
+@mixin Poppins {
+  font-family: Poppins, sans-serif;
+}
+
+@mixin Butler {
+  font-family: Butler, Georgia, 'Times New Roman', Times, serif;
+}
+
+// ===== Position and Box Shape =====
+@mixin is-round {
+  border-radius: 50%;
+}
+
+// horizontally center an element
+@mixin mx-auto {
+  margin: 0 auto;
+}
+
+// ===== Shadow and Border =====
+@mixin shadow-br {
+  box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.5);
+}
+
+// ===== Button =====
+@mixin cc-button($bgClr, $bgClrHvr, $borderClr, $borderClrHvr, $clr, $clrHvr) {
+  height: initial;
+  background-color: $bgClr;
+  color: $clr;
+  border: 2px solid $borderClr;
+  transition: background-color $duration-short, color $duration-short,
+    font-weight $duration-short;
+
+  &:hover,
+  &:focus {
+    background-color: $bgClrHvr;
+    color: $clrHvr;
+    border-color: $borderClrHvr;
+    font-weight: bold;
+  }
+}
+
+// ===== Other =====
+@mixin is-clickable {
+  cursor: pointer;
+}
+
+/* 
+Grey line used to divide sections of content
+Default direction is horizontal . Pass 'y' for vertical divider
+*/
+@mixin content-divider($direction: x, $thickness: 1px) {
+  @if $direction == x {
+    width: 100%;
+    height: $thickness;
+  } @else if $direction == y {
+    width: $thickness;
+    height: 100%;
+  }
+  background-color: $iconLight;
+}
+
+// ===== Media Breakpoints =====
+@mixin mobile-xs-up {
+  @media screen and (min-width: $mobile-xs + 1px) {
+    @content;
+  }
+}
+
+@mixin mobile-xs-to-tablet {
+  @media screen and (min-width: $mobile-xs + 1px) and (max-width: $tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile-xs-only {
+  @media screen and (max-width: $mobile-xs) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+// ===== Hover Effects and Animations =====
+
+@mixin hover-shadow {
+  &:hover {
+    box-shadow: 8px 8px 10px -5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@mixin expanding-box($borderRadius, $bgColor) {
+  &:before {
+    content: '';
+    z-index: -100;
+    position: absolute;
+    border-radius: $borderRadius;
+    background: none;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    margin-left: -50%;
+    background-color: $bgColor;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  &:hover:before {
+    transform: scale(1);
+  }
+}
+
+@mixin underline($bgColor: $shark) {
+  &:before {
+    content: '';
+    z-index: -100;
+    position: absolute;
+    width: 90%;
+    height: 3px;
+    left: 5%;
+    bottom: -3px;
+    background-color: $bgColor;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+    transform-origin: center;
+  }
+  &:hover:before {
+    transform: scaleX(1);
+  }
+}
+
+@mixin willSlideDown($duration: $duration-short, $display: block) {
+  transform-origin: top;
+  transition: transform $duration, opacity $duration;
+  display: $display;
+  opacity: 0;
+  transform: scaleY(0);
+  pointer-events: none;
+}
+
+@mixin slideDownShow {
+  transform-origin: top;
+  transform: scaleY(1);
+  opacity: 1;
+  pointer-events: all;
+}

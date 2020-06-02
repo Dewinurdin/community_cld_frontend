@@ -1,0 +1,299 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '~bulma/sass/utilities/initial-variables.sass';
+@import '~bulma/sass/utilities/mixins.sass';
+
+// ===== Navbar =====
+
+.navbar {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0 $gap-xxs;
+  border-bottom: 2px solid $black-bis;
+  margin-top: 0 !important;
+
+  img {
+    pointer-events: none;
+  }
+
+  @include mobile {
+    &.is-active {
+      height: 100vh;
+    }
+  }
+
+  @include tablet-up {
+    padding: 0 $gap;
+    flex-direction: row;
+    height: 72px;
+  }
+
+  &-start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      margin-left: $gap-sm;
+    }
+  }
+
+  &-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: {
+      bottom: $gap-sm;
+    }
+    & > a,
+    > div,
+    > button {
+      margin: {
+        top: $gap-sm;
+      }
+    }
+    @include tablet {
+      flex-direction: row;
+      margin: {
+        bottom: 0;
+      }
+      & > a,
+      > div,
+      > button {
+        margin: {
+          left: $gap-xxs;
+          top: 0;
+        }
+        padding: 0 $gap-xxs;
+      }
+    }
+  }
+
+  &-brand {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: calc(100vw - 16px);
+    @include tablet {
+      width: max-content;
+      max-width: calc(100vw - 64px);
+    }
+  }
+
+  &-item {
+    margin: 0 $gap-xxs;
+  }
+
+  &-menu {
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    flex-grow: 1;
+    padding: 0;
+    flex-direction: column;
+    overflow: visible !important;
+    z-index: 1000;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    &.is-active {
+      display: flex;
+    }
+  }
+
+  &-burger {
+    width: 16px;
+    margin-right: $gap-xxs;
+    margin-left: initial;
+    &:hover {
+      color: initial;
+      background-color: initial;
+    }
+
+    span {
+      pointer-events: none;
+    }
+  }
+}
+
+// ===== Dropdown =====
+.dropdown {
+  &:hover,
+  &-item:hover {
+    @include is-clickable;
+  }
+
+  &-item {
+    transition: background-color 0.3s, color 0.3s;
+    &:hover {
+      background-color: $shark;
+      color: white;
+    }
+  }
+  &-content {
+    background-color: $offwhite;
+  }
+
+  &-menu {
+    @include willSlideDown;
+
+    &.is-active {
+      @include slideDownShow;
+    }
+  }
+
+  // styles for dropdown menus in navbar. different on mobile
+  &.navDropdown {
+    margin-bottom: -4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .dropdown-menu.drop-center {
+      display: none;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    &.is-active {
+      .dropdown-menu.drop-center {
+        display: block;
+      }
+    }
+    @include tablet {
+      display: inline-flex;
+      flex-direction: row;
+      margin-bottom: 0;
+
+      .dropdown-menu.drop-center {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+      }
+
+      &.is-active {
+        .dropdown-menu.drop-center {
+          display: block;
+        }
+      }
+    } // styles for tablet up
+  }
+
+  // center-aligned dropdown menus NOT in navbar.
+  & .dropdown-menu.drop-center {
+    @include willSlideDown(0.4s);
+    min-width: unset;
+
+    @include tablet {
+      left: 50%;
+      transform: translateX(-50%) !important;
+    }
+  }
+
+  &.is-active .dropdown-menu.drop-center {
+    @include slideDownShow;
+  }
+}
+
+// ==== Input ====
+.input {
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 0px;
+  box-shadow: none;
+  text-align: left;
+  padding: 0;
+  background-color: white;
+}
+
+// ===== Section =====
+.section {
+  padding: {
+    left: 0;
+    right: 0;
+  }
+}
+
+// ===== Typography Classes =====
+.subtitle,
+.title {
+  color: inherit;
+}
+
+// ===== Button Classes =====
+
+.button {
+  border-radius: $radius-large;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.button.is-dark {
+  @include cc-button($shark, $white, $shark, $shark, $white, $shark);
+  &.is-fake:hover {
+    background-color: $shark;
+    color: $white;
+    font-weight: normal;
+  }
+}
+
+.button.is-primary {
+  @include cc-button($primary, $white, $primary, $primary, $white, $primary);
+  &.is-fake:hover {
+    background-color: $primary;
+    color: $white;
+    font-weight: normal;
+  }
+}
+// ===== Tag Classes =====
+.tag {
+  border: 1px solid $black-bis;
+  &:not(body) {
+    padding: {
+      left: $gap-sm;
+      right: $gap-sm;
+      top: 0;
+      bottom: 0;
+    }
+  }
+}
+
+// ===== Level =====
+.level {
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+// ===== Select =====
+div.select.is-rounded select {
+  border-radius: $radius-large;
+
+  option {
+    text-align: center;
+  }
+}
+
+// ==== Spacing for <select> ====
+.left-margin {
+  margin-left: $gap-sm;
+}
+
+// ==== Typography ====
+.has-text-grey-lighter {
+  color: $silver !important;
+}
+// ==== User Profile Event Tabs ====
+.tabs .is-active a {
+  border-bottom-color: $bittersweet !important;
+  color: $bittersweet !important;
+}

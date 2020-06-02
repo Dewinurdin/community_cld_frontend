@@ -1,0 +1,52 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '~bulma/sass/utilities/_all.sass';
+
+.featured {
+  &-wrapper {
+    margin-top: $gap-sm;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    padding: {
+      top: 8px;
+      bottom: 8px;
+    }
+    margin-left: -$gap-xxs;
+
+    @include mobile {
+      margin-top: $gap-xxs;
+    }
+  }
+
+  &-card {
+    display: inline-block;
+    flex-shrink: 0;
+    margin: {
+      left: $gap-xxs;
+      right: $gap-xxs;
+    }
+    width: 250px;
+    height: 380px;
+    overflow: hidden;
+    background-color: $shark;
+    color: $white;
+    border-radius: $radius;
+    @include hover-shadow;
+
+    &:hover {
+      color: $white;
+    }
+
+    &-content {
+      padding: $gap-xs;
+    }
+  }
+}
+
+.eventImage {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  background-color: $white;
+}

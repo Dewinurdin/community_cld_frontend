@@ -1,0 +1,62 @@
+//============= Palette =============
+$red: #ff2d2d;
+$bittersweet: #ff6768;
+$primary: $bittersweet; // override bulma
+$sunsetOrange: #ff4b4d;
+$danger: $sunsetOrange; // override bulma
+$shark: #21242c;
+$astronaut: #263d67;
+$chalice: #acaaaa;
+$silver: #c0c0c0;
+$iconLight: #999999;
+$link_hover: lightGrey;
+$offwhite: #f4f5f6;
+$blue: #4578ff;
+$white: #fff;
+$dark: $shark;
+
+//============= Padding ,Margins , Font Size=============
+$gap-lg: 56px;
+$gap: 32px; // bulma default
+$gap-md: 24px;
+$gap-sm: 16px;
+$gap-xs: 12px;
+$gap-xxs: 8px;
+
+// $size-1: 3rem; // bulma default, resolves to 48px
+// $size-2: 2.5rem; // bulma default, resolves to 40px
+// $size-3: 2rem; // bulma default, resolves to 32px
+// $size-4: 1.5rem; // bulma default, resolves to 24px
+// $size-5: 1.25rem; // bulma default, resolves to 20px
+// $size-6: 1rem; // bulma default, resolves to 16px;
+// $size-7: 0.75rem; // bulma default, resolves to 12px
+
+//============= Media Breakpoints =============
+$mobile-xs: 499px;
+
+//============= Component Sizes =============
+$container-width: 1035px; // used for setting max-width of  content
+$navbar-height: 72px;
+$navbar-padding-vertical: $gap-xs;
+$gridCard-w: 320px;
+
+//============= Borders =============
+$radius-small: 2px;
+$radius: 6px;
+$radius-large: 10px;
+$tag-radius: $radius-large;
+
+//============ Typography ===========
+$family-primary: Poppins, sans-serif;
+$family-secondary: Butler, Georgia, 'Times New Roman', Times, serif;
+
+//============ Dropdowns ===========
+$dropdown-item-hover-color: #fff;
+$dropdown-item-hover-background-color: $shark;
+
+//============ Buttons ===========
+$button-padding-vertical: $gap-xs;
+$button-padding-horizontal: $gap + $gap-xxs;
+
+//============ Animations ===========
+$duration-short: 0.2s;

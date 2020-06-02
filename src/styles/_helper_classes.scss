@@ -1,0 +1,270 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+// ===== Palette =====
+
+.color_chalice {
+  color: $chalice;
+}
+
+.color_black {
+  color: black;
+}
+
+.color_shark {
+  color: $shark;
+}
+.color_iconlight {
+  color: $iconLight;
+}
+
+// ===== Media Query Breakpoints =====
+.visible-xs-up {
+  @include mobile-xs-up {
+    display: block;
+  }
+}
+
+.hidden-xs {
+  @include mobile-xs-only {
+    display: none !important;
+  }
+}
+// ===== Palette =====
+
+// is-size-5 resolves to 20px, is-size-6 resolves to 16px, is-size-7 resolves to 12px
+
+// is-size-5half resolves to 18px
+.is-size-5half {
+  font-size: 1.125rem !important;
+}
+
+.is-size-5half-mobile {
+  @include mobile {
+    font-size: 1.125rem !important;
+  }
+}
+
+// is-size-6half resolves to 14px
+.is-size-6half {
+  font-size: 0.875rem !important;
+}
+
+.is-size-6half-mobile {
+  @include mobile {
+    font-size: 0.875rem !important;
+  }
+}
+
+// ===== Postion , Padding, Margin, Box Shape =====
+
+.d-none {
+  display: none;
+}
+
+.is-round {
+  @include is-round;
+}
+
+.mobile-section {
+  @include mobile {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+// horizontally center an element
+.mx-auto {
+  @include mx-auto;
+}
+
+.small-btn {
+  padding: 4px 8px !important;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.border-radius {
+  border-radius: $radius;
+}
+
+.border-radius-lg {
+  border-radius: $radius-large;
+}
+
+.border-radius--sm {
+  border-radius: $radius-small;
+}
+// ===== Other =====
+.d-none {
+  display: none !important;
+}
+
+.is-bold {
+  font-weight: bold;
+}
+
+// Change cursor when hovering a clickable element
+.is-clickable {
+  cursor: pointer;
+}
+
+// wrapper for each page
+.page-wrapper {
+  @include mx-auto;
+  max-width: $container-width;
+  padding: {
+    left: $gap-xxs;
+    right: $gap-xxs;
+  }
+
+  @include tablet-up {
+    padding: {
+      left: $gap;
+      right: $gap;
+    }
+  }
+}
+
+.no-pointer-events {
+  pointer-events: none;
+}
+
+.content-divider-x {
+  @include content-divider();
+}
+
+.content-divider-y {
+  @include content-divider(y);
+}
+
+// ===== Custom Dropdown =====
+.ccDropdown {
+  border: 1px solid $shark;
+  border-radius: $radius-large;
+}
+
+// ===== Borders =====
+.no-border {
+  border: none !important;
+}
+
+.no-outline-focus:focus {
+  outline: none;
+}
+
+// ===== Animations =====
+.hover-underline {
+  @include underline;
+}
+
+.hover-shadow {
+  @include hover-shadow;
+}
+
+a.tag.tag-hover,
+.tag.tag-hover {
+  transition: transform $duration-short, background-color $duration-short;
+  &:hover {
+    transform: scale(1.05);
+    background-color: $offwhite;
+    text-decoration: none;
+  }
+}
+
+.flip {
+  transition: transform $duration-short;
+  transform: rotate(180deg);
+}
+
+.willFadeIn {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fadeIn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.willSlideInL2R {
+  left: -150%;
+}
+.slideInL2R {
+  left: 0;
+}
+
+// ===== Forms =====
+.checkmarkContainer {
+  display: block;
+  position: relative;
+  margin-bottom: $gap-xs;
+
+  // hide default checkbox
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  label {
+    margin-left: 40px;
+  }
+
+  //add
+  &:hover input ~ .checkmark {
+    background-color: #ff9f9f;
+    border-color: #ff9f9f;
+  }
+
+  // show checkmark
+  & input:checked ~ .checkmark {
+    background-color: $primary;
+    border-color: $primary;
+    &:after {
+      // display: block;
+      opacity: 1;
+    }
+  }
+
+  // custom checkbox
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 1px solid $shark;
+    border-radius: $radius-small;
+    transition: background-color $duration-short, border-color $duration-short;
+
+    // checkmark icon
+    &:after {
+      // display: none;
+      opacity: 0;
+      content: '';
+      position: absolute;
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 12px;
+      border: solid $white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      transition: opacity $duration-short;
+    }
+  }
+}

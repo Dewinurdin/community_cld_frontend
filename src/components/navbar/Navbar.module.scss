@@ -1,0 +1,56 @@
+@import '_variables.scss';
+@import '_animations.scss';
+@import '_mixins.scss';
+@import '~bulma/sass/utilities/_all.sass';
+.navButton {
+  border: 0;
+  color: $black;
+  border-radius: $radius-large;
+  background: none;
+  position: relative;
+  transition: color 0.4s ease-in-out 0.1s;
+  &:hover {
+    color: $shark;
+  }
+  @include underline;
+}
+
+.profileButton {
+  border: none;
+  background-color: #fff;
+  img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.locationContent {
+  padding: $gap-xxs;
+  margin-left: 0 !important;
+  p[data-id='address-box'] {
+    display: flex;
+    margin: $gap-xs 0;
+    span:nth-of-type(2) {
+      padding-left: $gap-xxs;
+    }
+  }
+}
+
+.closeButton {
+  position: absolute;
+  right: $gap-xxs;
+  top: 0;
+  font-size: large;
+  color: $shark;
+  transition: text-shadow $duration-short;
+  &:hover {
+    text-shadow: $danger 0 0 4px;
+  }
+}
+
+.navatar {
+  height: 50px;
+  width: 50px;
+  min-width: 50px;
+  object-fit: cover;
+}
